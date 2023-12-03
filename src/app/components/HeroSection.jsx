@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const downloadCV = () => {
+    window.open('https://blog1.cdn.bcebos.com/Front-end%20Engineer(1)-%20Sun%20Chao.pdf')
+  }
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -22,7 +26,7 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Judy",
+                "Suedar",
                 1000,
                 "Web Developer",
                 1000,
@@ -37,8 +41,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+            Front end developer | Node.js | Chinese | Travel Guide | PS | PR
           </p>
           <div>
             <Link
@@ -51,7 +54,9 @@ const HeroSection = () => {
               href="/"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+              <span 
+                onClick={downloadCV}
+                className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
             </Link>
